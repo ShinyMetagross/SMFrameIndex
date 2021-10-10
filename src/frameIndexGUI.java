@@ -24,7 +24,7 @@ public class frameIndexGUI {
     private JScrollPane outputScroll;
     int nameNumber = 0;
     int startingFrame = 0;
-    int endingFrame = 1;
+    int endingFrame = 0;
     int amountOfParts = 1;
     int framesBetween = 1;
     String startingPrefix = "MD";
@@ -135,6 +135,10 @@ public class frameIndexGUI {
                 else if(startingFrame > endingFrame)
                 {
                     JOptionPane.showMessageDialog(null,"Starting frame must be less than ending frame.");
+                }
+                else if(nameNumber > 255)
+                {
+                    JOptionPane.showMessageDialog(null,"Starting number must be less than 256.");
                 }
                 else
                 {
