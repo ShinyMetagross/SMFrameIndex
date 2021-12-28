@@ -149,7 +149,7 @@ public class frameIndexGUI {
 
                         String hexNumber = String.format("%02x", (nameNumber + ((a - startingFrame) / 29))).toUpperCase();
                         for(int b = 0; b < amountOfParts; b++)
-                            frameData += ("FrameIndex " + startingPrefix + hexNumber + " " + (char) (((a - startingFrame) % 29) + 65) + " " + b + " " + a + "\n");
+                            frameData += ("FrameIndex " + startingPrefix + hexNumber + " " + (char) ((((a - startingFrame) % 29) / framesBetween) + 65) + " " + b + " " + a + "\n");
                     }
                     output.setText(frameData);
                 }
